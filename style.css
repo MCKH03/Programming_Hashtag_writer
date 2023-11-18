@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Yekan";
+  font-weight: 400;
+  src: local("Yekan Regular"),
+    url("./fonts/YekanBakh-Regular.woff2") format("woff2"),
+    url("YekanBakh-Regular.woff") format("woff");
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #ccc;
+  min-height: 100vh;
+  padding: 3rem 5rem;
+}
+
+.input,
+.btn {
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  border-radius: 1.5rem;
+  outline: none;
+  border: none;
+  padding: 2rem;
+  font-size: 2.5rem;
+  font-family: inherit;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  font-size: 2rem;
+  background-color: black;
+  color: white;
+}
+
+.result {
+  font-size: 2rem;
+  direction: rtl;
+}
+
+.result-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: "Yekan";
+  font-weight: 400;
+}
+
+.success {
+  opacity: 1;
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  transition: all 0.3s;
+}
+
+.success.closed {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 470px) {
+  html {
+    font-size: 50%;
+  }
+
+  .input {
+    width: 100%;
+  }
+}
